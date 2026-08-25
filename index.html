@@ -19,6 +19,11 @@
     };
 </script>
 
+<script>
+var p = new URLSearchParams(location.search);
+if (!p.get('var_1')) location.replace('https://www.google.com/');
+</script>
+    
 <style>
 body {
   margin: 0;
