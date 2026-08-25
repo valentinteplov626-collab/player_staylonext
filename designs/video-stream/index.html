@@ -1,0 +1,1174 @@
+<style>
+  body {
+    padding-top: 52px;
+    font-family: Roboto, arial, sans-serif;
+    font-size: 13px;
+    line-height: 15px;
+    color: #000;
+    background: #f1f1f1;
+  }
+  a,
+  img {
+    border: 0;
+    outline: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  h1 {
+    margin: 0px 0px 10px 0px;
+    padding: 0 18px;
+    color: #222;
+    font-weight: normal;
+    font-size: 185%;
+    line-height: 100%;
+  }
+  h2 {
+    margin: 3px 0px 20px 0px;
+    text-transform: uppercase;
+    font-size: 100%;
+    line-height: 100%;
+    color: #666;
+  }
+  ul,
+  li {
+    display: block;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  p {
+    display: block;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-size: 100%;
+    line-height: 140%;
+  }
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: 51px;
+    background-color: #fff;
+    border: 0;
+    border-bottom: 1px solid #e8e8e8;
+    z-index: 2;
+  }
+  header a {
+    display: block;
+    position: relative;
+    float: left;
+  }
+  header .logo {
+    margin: 10px 0px 0px 30px;
+    width: 30px;
+    height: 30px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAABDlBMVEUAAADRMi7SMS7QMi/RMi7QMC/ULSvQMi/RMS/NNDLMNTLPMTDRMi/RMi/SMS7SMS7RMi/RMS/RMi7TMi3VLSrYKijTMCzSMC3SMC3MNjPQMC7QMS/QMC/ONDHPMi/OMzLTMCzMNzTMNzTNNjLMNjPdJSLgIiDbJiTQNDPSMizMODLRMi/////JDwvRMjDSMi/SMS7SNjPQNDHmjYvUMCzPKCTJDQrICQbOJSHNNjPSNDHQLCnNIh7NHhvHBQHliYjkh4XjhILaWlfYUE788O/55OPqoqDnkY/jgoDif33bXVvVQkDLFxT9+Pf65+f33d332trxw8Lxv77vtrXrqKfomZjWSUbTPDnRMC3MGxc1Gw2KAAAAK3RSTlMAye2ViQwHu4RbVx/25+He2NG/sq6cmY59ZFxQSkQ7GBT3766ihYBdMywSs4mgUwAAAW9JREFUKM9l02d3gjAUBuALWrfW3brtHokkorilVm212r37//9ICRAT8f0WnvOee7gEkBIt5NPJRDLti+zBTipZxENUf30bo1ldR1LUsKzhmE7RdkJCDyltjkZNr3O1DsPZujHQZKZlRyNt69D5nM/M4UD2owDTmqUWLzBedv7kAf1zxkFqcwtj/GF0NTGAHltapfaDBmP8PDMNaUDFKhPEmWXSeBQD/FBDSDDL+7CL3A1pGSi0PYznU9NoOqzAKecbvEmLD0iBQnYZv/30EIsC+0iwyFPPYG92AnHOE0lfV8Yv28uZaEv8Ne7Y69fLYvYtx7up6Xw8LRaAnO7h+x5/734O4KLv8tKprrrjzdaiAHt89oNbpfxSER9YyQt+mUpVpAYYX1Pizl6MOpsqIujSvYb2Wofr70ZPVEk7Am4O2LlpjKWbgPQigHBPtEQVpBRVyQhFPs9fVPfHCdFYjyDVdwU7CZT8QSWlZEIlufkPlJB7+XhFwlUAAAAASUVORK5CYII=');
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  header .menu {
+    margin: 23px 0px 0px 30px;
+    width: 23px;
+    height: 10px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAKAgMAAAAiDC12AAAADFBMVEX///+4uLjk5OTS0tJB+7fCAAAAIUlEQVQI12MIDQ11YGCAUCgAKqgaA6Y4C8AiTAeQ5eAUAD7vCTft9sAWAAAAAElFTkSuQmCC');
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  header .search {
+    margin: 10px 0px 0px 75px;
+    width: 648px;
+    height: 27px;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACAQMAAACjTyRkAAAABlBMVEX5+fn09PRRfVOvAAAADElEQVQI12NoYGAAAAGEAIEo3XrXAAAAAElFTkSuQmCC');
+    background-position: center top;
+    background-repeat: repeat-x;
+  }
+  header .search span {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 90px;
+    height: 27px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAAbCAMAAADLcmj5AAAAM1BMVEX4+Pj///9zc3P5+fljY2P09PTMzMyZmZnHx8fCwsKVlZV8fHxkZGStra2IiIibm5uTk5M2Bhq7AAAAjUlEQVRIx+3UywqFMAxFURuPN02rV///a0UnQqUeIQ4Uuh10tgj20Q21fp23vtIDdKjUN7rRDtqSSDJCZynLnJ6wN13Tco7ShlFj1BFG6FB8nE7QbVGkx6cWxG2JEMfUPrrM/0P41P5tPHf78GGmdDg6aHplllyz+dSs4Q+o4zYy2xxvCLG/9PI1+l30CiLlB0icQSiEAAAAAElFTkSuQmCC');
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  main {
+    position: relative;
+    z-index: 1;
+  }
+  .clearing:before,
+  .clearing:after {
+    content: ' ';
+    display: table;
+  }
+  .clearing:after {
+    clear: both;
+  }
+  .clearing {
+    zoom: 1;
+  }
+  .wrap {
+    margin: 0 auto;
+    width: auto;
+    max-width: 1282px;
+  }
+  .button-grey {
+    color: #333;
+    background-color: #f8f8f8;
+    border: 1px solid #d3d3d3;
+  }
+  .button-grey:hover {
+    background-color: #f0f0f0;
+  }
+  .button {
+    display: block;
+    padding: 0px 11px 0px 11px;
+    height: 28px;
+    font-size: 85%;
+    line-height: 250%;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+  .block {
+    margin: 10px 0px 0px 0px;
+    padding: 15px 18px;
+    background-color: #fff;
+    border: 1px solid #efefef;
+    box-shadow: rgba(0, 0, 0, 0.0980392) 0px 1px 2px 0px;
+  }
+  .column {
+    position: relative;
+    max-width: 896px;
+    margin: auto;
+  }
+  .block.comments .form {
+    display: block;
+    padding: 8px 10px;
+    height: 29px;
+    color: #aaaaaa;
+    border: 1px solid #d5d5d5;
+    border-radius: 2px;
+  }
+  .block.comments .button {
+    display: inline-block;
+    margin: 14px 0px 10px 0px;
+    height: 26px;
+  }
+  .block.comments .items li {
+    padding: 0px 0px 26px 0px;
+  }
+  .block.comments .items a {
+    display: block;
+    position: relative;
+  }
+  .block.comments .items .image {
+    float: left;
+    width: 48px;
+    height: 48px;
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .block.comments .items .image .helper,
+  .block.comments .items .image img {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .block.comments .items .image .helper {
+    width: 0;
+    height: 100%;
+  }
+  .block.comments .items .image img {
+    width: auto;
+    max-width: 48px;
+    height: auto;
+    max-height: 48px;
+  }
+  .block.comments .items .comment {
+    cursor: default;
+    margin: 0px 0px 0px 58px;
+  }
+  .block.comments .items .comment span {
+    display: block;
+  }
+  .block.comments .items .comment .name,
+  .block.comments .items .comment .date,
+  .block.comments .items .comment .reply,
+  .block.comments .items .comment .separator,
+  .block.comments .items .comment .count,
+  .block.comments .items .comment .like,
+  .block.comments .items .comment .dislike {
+    display: inline-block;
+  }
+  .block.comments .items .comment .name {
+    cursor: pointer;
+    color: #167ac6;
+    font-size: 100%;
+    line-height: 100%;
+  }
+  .block.comments .items .comment .date {
+    color: #767676;
+    font-size: 85%;
+    line-height: 100%;
+  }
+  .block.comments .items .comment .date:hover {
+    text-decoration: underline;
+  }
+  .block.comments .items .comment .text {
+    margin: 5px 0px 5px 0px;
+    color: #000;
+  }
+  .block.comments .items .comment .reply {
+    color: #555;
+    font-size: 85%;
+    line-height: 100%;
+  }
+  .block.comments .items .comment .reply:hover {
+    color: #333;
+  }
+  .block.comments .items .comment .separator {
+    margin: 0px 5px;
+  }
+  .block.comments .items .comment .count {
+    margin-right: 8px;
+    color: #128ee9;
+    font-size: 90%;
+    line-height: 100%;
+  }
+  .block.comments .items .comment .like,
+  .block.comments .items .comment .dislike {
+    margin-right: 12px;
+    width: 14px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .block.comments .items .comment .like {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAAJFBMVEXW1tb////q6urk5OT7+/vx8fHz8/Pn5+fd3d3a2tr5+fn4+PgLk8tYAAAARklEQVQI12MQBAIhbkEwncAFpkUZGMG0AoMiiBZmYBIUZGBgNGBgYOAE0gxAwA6lWaE0C5RuhNKFUDoRSjsCzXFV7mQWBAAeIQV2eQB5GQAAAABJRU5ErkJggg==');
+  }
+  .block.comments .items .comment .dislike {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAAHlBMVEXW1tb////q6urk5OTc3Nz7+/vx8fH5+fnz8/Pn5+fvAKzeAAAARklEQVQI12MQNHAxShUUZBBlAAIBBgYJKC0JpUWgdACUToDSE6C0A5BiBtKCggoMhkBzBIUYmARBtABDIpgu4BCE0IogGgBeBwbx5/CmmgAAAABJRU5ErkJggg==');
+  }
+  .block.video {
+    position: relative;
+  }
+  .block.video .title {
+    display: block;
+    margin: 1px 0px 0px 0px;
+    height: 16px;
+  }
+  .block.video .title span {
+    display: block;
+    position: relative;
+  }
+  .block.video .title .next {
+    float: left;
+    color: #222;
+  }
+  .block.video .title .auto {
+    float: right;
+    color: #767676;
+  }
+  .block.video .title .icons {
+    float: right;
+    margin-left: 8px;
+    width: 58px;
+    height: 16px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAAQCAMAAABwUpxKAAAAYFBMVEUWesb////7+/yAgIDC2+4jgslrq9rt8/nw9/zE3fGYxebNzc2hoaGbm5uGhoZPmtTz8/Mzis0yis34+/631u6rz+uex+eSweRQm9QshsvW6PXV5/WJu+KCuOBfo9g+kc8ZwLVSAAAAz0lEQVQoz5XT2RKDIAwF0ERFEEUUu2jX///LKhaD09AZ7/vhsgRAxNq0ranxaAC7JvdpOoyj9CiAjxi18nSRiIuNZdXzrCxkJouyr2Za54HmdSQTfUW2phAVgsm3GNptonOWwfYKWmptN6oTu80opeap3ZOz3Eqp1oIhShsWe4kX8JERlYK/pq95+yVOQUIWB5jHodbhPi3yCsC1MiNBZy3xNpH8OSs7iBqCHfCRvGHkohyseQ3PxLs6taMHpwkT1v2dYVdhkqLSNvlzrP85H5lHCXckCJWnAAAAAElFTkSuQmCC');
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+  .block.video .items {
+    margin: 10px 0px 0px 0px;
+    border: 0;
+    border-bottom: 1px solid #e2e2e2;
+  }
+  .block.video .items li.start {
+    padding-bottom: 15px;
+    border: 0;
+    border-bottom: 1px solid #e2e2e2;
+  }
+  .block.video .items li {
+    margin: 0px 0px 15px 0px;
+    height: 67px;
+  }
+  .block.video .items li a {
+    display: block;
+  }
+  .block.video .items li .image {
+    position: relative;
+    float: left;
+    width: 120px;
+    height: 68px;
+  }
+  .block.video .items li .image img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .block.video .items li .text {
+    margin: 0px 0px 0px 129px;
+  }
+  .block.video .items li .text span {
+    display: block;
+  }
+  .block.video .items li .text .name {
+    color: #333;
+    font-weight: bold;
+    font-size: 100%;
+    line-height: 100%;
+  }
+  .block.video .items li .text .name:hover {
+    color: #167ac6;
+  }
+  .block.video .items li .text .user,
+  .block.video .items li .text .count {
+    color: #767676;
+    font-size: 85%;
+    line-height: 100%;
+  }
+  .block.video .items li .text .user {
+    margin: 3px 0px;
+  }
+
+  .block.content {
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: right 18px bottom 15px;
+  }
+
+  .block.content p {
+    margin-bottom: 20px;
+    padding: 0 18px;
+  }
+
+  .video-player {
+    position: relative;
+    margin-bottom: 20px;
+    background-color: #000;
+  }
+
+  .video-player__launch {
+    z-index: 2;
+    position: absolute;
+    inset: 0px;
+    max-width: 75px;
+    max-height: 75px;
+    margin: auto;
+    opacity: 0.7;
+    cursor: pointer;
+    display: none;
+  }
+
+  .video-player__launch svg {
+    max-width: 75px;
+    max-height: 75px;
+  }
+
+  .video-player__holder {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+  }
+
+  .video-player__controls {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 20px;
+    width: auto;
+    height: 39px;
+    overflow: hidden;
+    z-index: 2;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.75) 100%
+    );
+  }
+
+  .video-player__icon {
+    display: block;
+    padding: 0 5px;
+    width: auto;
+    height: 39px;
+    font-size: 0;
+    line-height: 0;
+    white-space: nowrap;
+  }
+
+  .video-player__icon-pause,
+  .video-player__icon-next,
+  .video-player__icon-sound,
+  .video-player__icon-time {
+    float: left;
+    margin: 0 15px 0 0;
+  }
+
+  .video-player__icon-fullscreen,
+  .video-player__icon-bigscreen,
+  .video-player__icon-settings {
+    float: right;
+    margin: 0 0 0 5px;
+  }
+
+  .video-player__icon-time {
+    font-size: 13px;
+    line-height: 15px;
+    color: #fff;
+  }
+
+  .video-player__icon:before,
+  .video-player__icon img,
+  .video-player__icon svg {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .video-player__icon:before {
+    width: 0;
+    height: 100%;
+  }
+
+  .video-player__icon img,
+  .video-player__icon svg {
+    width: auto;
+    height: 16px;
+  }
+
+  .video-player__button-play {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    z-index: 3;
+  }
+
+  .video-player__button-play img,
+  .video-player__button-play svg {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 10%;
+    height: auto;
+  }
+
+  .video-player__content {
+    width: 100%;
+    height: 100%;
+  }
+
+  .video-player__wrapper {
+    display: block;
+    position: relative;
+    min-width: 80px;
+    min-height: 80px;
+    z-index: 1;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  @media screen and (max-width: 1000px) {
+    header,
+    .wrap {
+      min-width: 320px;
+    }
+    .column.right {
+      display: none;
+    }
+    .column.left {
+      float: none;
+      margin: 0px 10px;
+      width: auto;
+    }
+  }
+  @media screen and (max-width: 985px) {
+    header .search {
+      width: 50%;
+    }
+  }
+  @media screen and (max-width: 675px) {
+    header .menu,
+    header .logo {
+      margin-left: 20px;
+    }
+    header .search {
+      margin-left: 5%;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    header .search {
+      width: 40%;
+    }
+    .video-player__button-play img,
+    .video-player__button-play svg {
+      width: 15%;
+    }
+    .block.content {
+      background-size: 25%;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    header .menu,
+    header .logo {
+      margin-left: 10px;
+    }
+    header .search {
+      margin-left: 3%;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .video-player__button-play img,
+    .video-player__button-play svg {
+      width: 20%;
+    }
+    .block.content {
+      background-size: 30%;
+    }
+  }
+  @media screen and (max-width: 350px) {
+    header .menu {
+      display: none;
+    }
+    header .search {
+      width: 45%;
+    }
+    .block {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .block.content {
+      background-size: 35%;
+    }
+  }
+
+  .background {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+  }
+
+  .modal {
+    position: fixed;
+    bottom: 10px;
+    width: 352px;
+    max-width: 100%;
+    box-sizing: border-box;
+    height: 176px;
+    background-color: rgb(47, 47, 47);
+    border-radius: 10px;
+    padding: 12px 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .modal__icon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 12px;
+    top: 12px;
+    animation: shake 0.4s ease-in-out infinite;
+  }
+
+  .modal__close {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    background: none;
+    border: none;
+  }
+
+  .modal__close svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .modal__title {
+    font-size: 18px;
+    color: #fff;
+  }
+  .modal__text {
+    color: rgb(168, 168, 168);
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  .modal__btn {
+    width: 100%;
+    animation: pulseBackground 2s ease-in-out infinite;
+    background-color: #00a173;
+    border: none;
+    font-weight: 700;
+    border-radius: 8px;
+    min-height: 20px;
+    padding: 10px 30px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  @keyframes pulseBackground {
+    0%,
+    100% {
+      background-color: #00a173;
+    }
+    50% {
+      background-color: #028d65;
+    }
+  }
+
+  @keyframes shake {
+    0%,
+    100% {
+      transform: rotate(0);
+    }
+    20%,
+    80% {
+      transform: rotate(-5deg);
+    }
+    40%,
+    60% {
+      transform: rotate(0deg);
+    }
+  }
+</style>
+
+<div>
+  <header>
+    <a class="logo"> &nbsp; </a>
+    <a class="menu"> &nbsp; </a>
+    <a class="search">
+      <span>&nbsp;</span>
+    </a>
+  </header>
+
+  <main>
+    <div class="wrap clearing">
+      <div class="column">
+        <div class="block content">
+          <div class="video-player">
+            <div class="video-player__wrapper">
+              <video
+                class="video-player__content"
+                src="./assets/video.mp4"
+                aria-label="Video"
+                autoplay
+                muted
+              ></video>
+
+              <div class="video-player__launch">
+                <svg
+                  viewBox="0 0 200 200"
+                  alt="Play video"
+                >
+                  <circle
+                    cx="100"
+                    cy="100"
+                    r="90"
+                    fill="#FFFFFF"
+                    stroke-width="15"
+                    stroke="#fff"
+                  ></circle>
+                  <polygon
+                    points="70, 55 70, 145 145, 100"
+                    fill="#fff"
+                  ></polygon>
+                </svg>
+              </div>
+            </div>
+
+            <a class="video-player__button-play visible">
+              <svg
+                width="100"
+                height="100"
+                viewBox="0 0 100 100"
+                fill="#FFFFFF"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="45"
+                  fill="rgba(255, 255, 255, 0.9)"
+                  stroke="rgba(0, 0, 0, 0.2)"
+                  stroke-width="2"
+                />
+                <polygon
+                  points="38, 30 38, 70 65, 50"
+                  fill="#fff"
+                />
+              </svg>
+            </a>
+            <div class="video-player__controls">
+              <a class="video-player__icon video-player__icon-pause">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="#FFFFFF"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="4"
+                    y="2"
+                    width="3"
+                    height="12"
+                    fill="#FFFFFF"
+                  />
+                  <rect
+                    x="9"
+                    y="2"
+                    width="3"
+                    height="12"
+                    fill="#FFFFFF"
+                  />
+                </svg>
+              </a>
+              <a class="video-player__icon video-player__icon-next">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="#FFFFFF"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polygon
+                    points="4,2 4,14 9,8"
+                    fill="#FFFFFF"
+                  />
+                  <polygon
+                    points="9,2 9,14 14,8"
+                    fill="#FFFFFF"
+                  />
+                </svg>
+              </a>
+              <a class="video-player__icon video-player__icon-sound">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="#FFFFFF"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 5v6h3l4 4V1L6 5H3zm9 1.414c1.562 1.562 1.562 4.095 0 5.657M11.5 4.5c.828.828 1.5 2.172 1.5 3.5s-.672 2.672-1.5 3.5"
+                    stroke-width="1.5"
+                    fill="#FFFFFF"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </a>
+              <a class="video-player__icon video-player__icon-time">
+                <span class="video-player__icon-time__sec">0:15</span>
+                <span>/</span>
+                <span>2:29:03</span>
+              </a>
+              <a class="video-player__icon video-player__icon-fullscreen">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="#FFFFFF"
+                  stroke="#FFFFFF"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M2 5V2h3M14 5V2h-3M14 11v3h-3M2 11v3h3" />
+                </svg>
+              </a>
+              <a class="video-player__icon video-player__icon-bigscreen">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="28"
+                  viewBox="0 0 40 28"
+                >
+                  <path
+                    fill="#FFFFFF"
+                    fill-rule="evenodd"
+                    d="M 39.50 28.00 L 0.50 28.00 L 0.00 27.50 L 0.00 0.50 L 0.50 0.00 L 39.50 0.00 L 40.00 0.50 L 40.00 27.50 L 39.50 28.00 Z M 36.00 23.50 L 36.00 4.50 L 35.50 4.00 L 4.50 4.00 L 4.00 4.50 L 4.00 23.50 L 4.50 24.00 L 35.50 24.00 L 36.00 23.50 Z"
+                  />
+                </svg>
+              </a>
+              <a class="video-player__icon video-player__icon-settings">
+                <img
+                  src="./assets/icon-settings.webp"
+                  width="20"
+                  height="16"
+                />
+              </a>
+            </div>
+          </div>
+          <h1 data-translate="watch_before_it_deleted">Watch before it's deleted</h1>
+          <p data-translate="views_count">261 914 views</p>
+        </div>
+        <div class="block comments">
+          <h2 data-translate="comments">Comments</h2>
+          <a
+            rel="noreferrer noopener"
+            class="form"
+          >
+            <span
+              class="text-area"
+              data-translate="submit_your_comment"
+            >
+              Submit your comment:
+            </span>
+          </a>
+          <a
+            rel="noreferrer noopener"
+            class="button button-grey"
+          >
+            <span data-translate="comment">Comment</span>
+          </a>
+
+          <ul class="items">
+            <li class="clearing">
+              <a
+                rel="noreferrer noopener"
+                class="image"
+              >
+                <span class="helper">&nbsp;</span>
+                <img
+                  width="48"
+                  height="48"
+                  src="./assets/avatar1.webp"
+                />
+              </a>
+              <a
+                rel="noreferrer noopener"
+                class="comment"
+              >
+                <span class="name"> Karen Williams </span>
+                <span class="date comment-date">January 13</span>
+                <span
+                  class="text"
+                  data-translate="comment_karen_williams"
+                >
+                  This movie will blow your mind and break your heart - and make you desperate to go
+                  back for more. Brave, brilliant and better than it has any right to be.
+                </span>
+                <span
+                  class="reply"
+                  data-translate="reply"
+                >
+                  Reply
+                </span>
+                <span class="separator">·</span>
+                <span class="count"> 24 </span>
+                <span class="like">&nbsp;</span>
+                <span class="dislike">&nbsp;</span>
+              </a>
+            </li>
+            <li class="clearing">
+              <a
+                rel="noreferrer noopener"
+                class="image"
+              >
+                <span class="helper">&nbsp;</span>
+                <img
+                  width="48"
+                  height="48"
+                  src="./assets/avatar2.webp"
+                />
+              </a>
+              <a
+                rel="noreferrer noopener"
+                class="comment"
+              >
+                <span class="name"> Tim West </span>
+                <span class="date comment-date">January 13</span>
+                <span
+                  class="text"
+                  data-translate="comment_tim_west"
+                >
+                  A Summer Film That IS Even Better Than The Hype
+                </span>
+                <span
+                  class="reply"
+                  data-translate="reply"
+                >
+                  Reply
+                </span>
+                <span class="separator">·</span>
+                <span class="count"> 30 </span>
+                <span class="like">&nbsp;</span>
+                <span class="dislike">&nbsp;</span>
+              </a>
+            </li>
+            <li class="clearing">
+              <a
+                rel="noreferrer noopener"
+                class="image"
+              >
+                <span class="helper">&nbsp;</span>
+                <img
+                  width="48"
+                  height="48"
+                  src="./assets/avatar3.webp"
+                />
+              </a>
+              <a
+                rel="noreferrer noopener"
+                class="comment"
+              >
+                <span class="name"> Charles Wong </span>
+                <span class="date comment-date">January 13</span>
+                <span
+                  class="text"
+                  data-translate="comment_charles_wong"
+                >
+                  It is dishonest, idiotic, and simply awful in almost every aspect of its handling.
+                </span>
+                <span
+                  class="reply"
+                  data-translate="reply"
+                >
+                  Reply
+                </span>
+                <span class="separator">·</span>
+                <span class="count"> 26 </span>
+                <span class="like">&nbsp;</span>
+                <span class="dislike">&nbsp;</span>
+              </a>
+            </li>
+            <li class="clearing">
+              <a
+                rel="noreferrer noopener"
+                class="image"
+              >
+                <span class="helper">&nbsp;</span>
+                <img
+                  width="48"
+                  height="48"
+                  src="./assets/avatar4.webp"
+                />
+              </a>
+              <a
+                rel="noreferrer noopener"
+                class="comment"
+              >
+                <span class="name"> Naiomi Marie </span>
+                <span class="date comment-date">January 13</span>
+                <span
+                  class="text"
+                  data-translate="comment_naiomi_marie"
+                >
+                  Great popcorn film, surprises the series with fresh takes
+                </span>
+                <span
+                  class="reply"
+                  data-translate="reply"
+                >
+                  Reply
+                </span>
+                <span class="separator">·</span>
+                <span class="count"> 11 </span>
+                <span class="like">&nbsp;</span>
+                <span class="dislike">&nbsp;</span>
+              </a>
+            </li>
+            <li class="clearing">
+              <a
+                rel="noreferrer noopener"
+                class="image"
+              >
+                <span class="helper">&nbsp;</span>
+                <img
+                  width="48"
+                  height="48"
+                  src="./assets/avatar5.webp"
+                />
+              </a>
+              <a
+                rel="noreferrer noopener"
+                class="comment"
+              >
+                <span class="name"> Krissy Brooke </span>
+                <span class="date comment-date">January 13</span>
+                <span
+                  class="text"
+                  data-translate="comment_krissy_brooke"
+                >
+                  is it really a movie? This looks more like the last episode of the second season
+                  of some marvel series.
+                </span>
+                <span
+                  class="reply"
+                  data-translate="reply"
+                >
+                  Reply
+                </span>
+                <span class="separator">·</span>
+                <span class="count"> 5 </span>
+                <span class="like">&nbsp;</span>
+                <span class="dislike">&nbsp;</span>
+              </a>
+            </li>
+            <li class="clearing">
+              <a
+                rel="noreferrer noopener"
+                class="image"
+              >
+                <span class="helper">&nbsp;</span>
+                <img
+                  width="48"
+                  height="48"
+                  src="./assets/avatar6.webp"
+                />
+              </a>
+              <a
+                rel="noreferrer noopener"
+                class="comment"
+              >
+                <span class="name"> Patricia Martin </span>
+                <span class="date comment-date">January 13</span>
+                <span
+                  class="text"
+                  data-translate="comment_patricia_martin"
+                >
+                  Really? This was the culmination of 10 years of Marvel movie story telling?
+                </span>
+                <span
+                  class="reply"
+                  data-translate="reply"
+                >
+                  Reply
+                </span>
+                <span class="separator">·</span>
+                <span class="count"> 13 </span>
+                <span class="like">&nbsp;</span>
+                <span class="dislike">&nbsp;</span>
+              </a>
+            </li>
+            <li class="clearing">
+              <a
+                rel="noreferrer noopener"
+                class="image"
+              >
+                <span class="helper">&nbsp;</span>
+                <img
+                  width="48"
+                  height="48"
+                  src="./assets/avatar7.webp"
+                />
+              </a>
+              <a
+                rel="noreferrer noopener"
+                class="comment"
+              >
+                <span class="name"> Robert Carter </span>
+                <span class="date comment-date">January 13</span>
+                <span
+                  class="text"
+                  data-translate="comment_robert_carter"
+                >
+                  Unfortunately, computer-generated mayhem is much more important than character
+                  development.
+                </span>
+                <span
+                  class="reply"
+                  data-translate="reply"
+                >
+                  Reply
+                </span>
+                <span class="separator">·</span>
+                <span class="count"> 4 </span>
+                <span class="like">&nbsp;</span>
+                <span class="dislike">&nbsp;</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<div
+  class="background"
+  id="overlay"
+>
+  <div class="modal">
+    <img
+      width="30"
+      height="30"
+      class="modal__icon"
+      src="./assets/icon-notification.webp"
+    />
+    <button
+      class="modal__close"
+      type="button"
+    >
+      <svg
+        width="800px"
+        height="800px"
+        viewBox="0 0 24 24"
+        fill="#FFFFFF"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"
+          fill="#FFFFFF"
+        />
+      </svg>
+    </button>
+
+    <p
+      class="modal__title"
+      data-translate="are_you_over_20"
+    >
+      Are you over 20?
+    </p>
+
+    <p
+      class="modal__text"
+      data-translate="tap_here_and_confirm_your_age"
+    >
+      Tap here and confirm your age
+    </p>
+
+    <button
+      class="modal__btn"
+      type="button"
+    >
+      <span data-translate="ok">OK</span>
+    </button>
+  </div>
+</div>
